@@ -43,6 +43,7 @@
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -178,12 +179,22 @@
             this.richTextBox6.Text = "Captain Blue";
             this.richTextBox6.TextChanged += new System.EventHandler(this.richTextBox6_TextChanged);
             // 
+            // richTextBox7
+            // 
+            this.richTextBox7.Location = new System.Drawing.Point(121, 4);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(172, 67);
+            this.richTextBox7.TabIndex = 28;
+            this.richTextBox7.Text = "";
+            this.richTextBox7.TextChanged += new System.EventHandler(this.richTextBox7_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(418, 262);
+            this.Controls.Add(this.richTextBox7);
             this.Controls.Add(this.richTextBox6);
             this.Controls.Add(this.richTextBox5);
             this.Controls.Add(this.richTextBox4);
@@ -201,6 +212,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "RedVsBlue";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -222,6 +234,7 @@
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox richTextBox7;
     }
 }
 

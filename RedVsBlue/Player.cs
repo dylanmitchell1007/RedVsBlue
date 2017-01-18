@@ -13,20 +13,48 @@ namespace RedVsBlue
         /// This is Player Default Constructor.
         /// </summary>
         public Player() { }
-        public int health = 100;
-        public string Name;
-        public int attack = 20;
-        public int ID = 0;
-        delegate void onEndTurn()
+
+        public Player(int pHealth, string pName)
         {
-            OnEndTurn  
+            health = pHealth;
+            name = pName;
+
+
+
+
         }
+
+
+
+
+       int health;
+        public int Health
+        {
+            get { return health;}
+            set { health = value;}
+        }
+       string name;
+       public string Name
+        {
+            get { return name; }
+            set { name = value;}
+        }
+
+       int attack = 20;
+       
+
+        public delegate void OnEndTurn();
+        public OnEndTurn onEndTurn;
+
         /// <summary>
         /// This End Turns for each players
         /// </summary>
         public void EndTurn()
         {
-        if (OnEndTurn != null) ;
+        if (onEndTurn != null)
+            {
+                onEndTurn.Invoke();
+            }
         
           //if each player goes in each party, go to the next party and cycle through
          

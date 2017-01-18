@@ -8,34 +8,35 @@ namespace RedVsBlue
 {
     class TurnSystem
     {
-        List<Party> Parties;
-        TurnSystem()
+        
+        public TurnSystem()
         {
-            Parties = new List<Party>();
+            
         }
 
 
-        
+
         public Player ActivePlayer = new Player();
         public Party ActiveParty = new Party();
-        
-        public ActiveParty.ActivePlayer[];    
-        //ActiveParty.members[currentPlayerIndex]
-        /// <summary>
-        /// If it is not a Players turn they will be placed in queue
-        /// </summary>
-        public void Queue()
+
+        public void Startup(Party One, Party Two)
         {
-            
-                
-        }
-        
-        public void EndTurn()
-        {
-            
-            
+            ActiveParty = One;
+            ActivePlayer = One.Squad[One.ID];
         }
 
+        public void CurrentPlayer()
+        {
+            if(ActiveParty.ID >= ActiveParty.Squad.Count())
+            {
+                
+            }
+
+
+            ActivePlayer = ActiveParty.Squad[ActiveParty.ID];
+            
+        }
+        
 
 
     }

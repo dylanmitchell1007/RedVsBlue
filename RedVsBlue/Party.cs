@@ -8,7 +8,8 @@ namespace RedVsBlue
 {
     class Party
     {
-        List<Player> Squad = new List<Player>();
+       public List<Player> Squad = new List<Player>();
+       public int ID = 0;//CurrentPlayer
         /// <summary>
         /// This Party Default Constructor.
         /// </summary>
@@ -19,24 +20,23 @@ namespace RedVsBlue
         /// <param name="one"></param>
         /// <param name="two"></param>
         /// <param name="three"></param>
-        public AddPlayer(p)
+        public void AddPlayer(Player p)
         {
-            Squad.Add(p)
-            p.EndTurn;
+            Squad.Add(p);
+            p.onEndTurn += NextPlayer;
+
         }
-        public Party(Player one, Player two, Player three)
+      
+       public void NextPlayer()
         {
-                Squad.Add(one);
-                Squad.Add(two);
-                Squad.Add(three);
+            ID++;
+
         }
-        
-       
          
         
     
     }
-
+   
 
 
 
