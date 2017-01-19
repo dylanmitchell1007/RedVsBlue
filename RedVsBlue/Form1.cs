@@ -71,13 +71,14 @@ namespace RedVsBlue
         
         private void progressBar2_Click(object sender, EventArgs e)
         {
+            progressBar2.Value = this.TS.ActiveParty.Squad[2].Health;
             
         
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
-           
+            progressBar1.Value = this.TS.ActiveParty.Squad[1].Health;
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
@@ -107,7 +108,7 @@ namespace RedVsBlue
 
         private void progressBar5_Click(object sender, EventArgs e)
         {
-            
+            progressBar5.Value = this.TS
         }
 
         private void richTextBox7_TextChanged(object sender, EventArgs e)

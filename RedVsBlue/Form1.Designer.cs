@@ -186,6 +186,7 @@
             this.richTextBox7.Size = new System.Drawing.Size(172, 67);
             this.richTextBox7.TabIndex = 28;
             this.richTextBox7.Text = "";
+            this.richTextBox7.ReadOnlyChanged += new System.EventHandler(this.richTextBox4_TextChanged);
             this.richTextBox7.TextChanged += new System.EventHandler(this.richTextBox7_TextChanged);
             // 
             // Form1
